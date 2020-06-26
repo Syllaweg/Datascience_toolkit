@@ -25,12 +25,12 @@ Pour cela nous devons savoir si nous avons des données d’expérimentation ave
 
 Ensuite quelle est la typologie du problème à résoudre :
 
-Régression
-Classification
-Clustering
-Classement (ranking)
-Système de recommandations
-Réduction du nombre de dimension
+- Régression
+- Classification
+- Clustering
+- Classement (ranking)
+- Système de recommandations
+- Réduction du nombre de dimension
 Pour avoir plus de détails sur ces problèmes de Machine Learning. Si vous êtes perdu n’hésitez pas à vous référer au memento des algorithmes de Machine Learning de datacorner.fr
 
 ## Etape N°2 : Accès & Analyse des données
