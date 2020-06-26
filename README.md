@@ -11,12 +11,11 @@ Ce n’est pas un projet de développement classique et il a donc ses propres co
 Réussir son projet de Machine Learning revient à donc respecter les étapes ci-dessous:
 
 ## Définition des objectifs
-Accès & Analyse des données
-Préparation des données
-Modélisation
-Evaluation et scoring (Itération)
-Déploiement (Ré-évaluation régulière/Itération)
-Dans cet article nous parcourrons ensemble ces différentes étapes et nous verrons surtout les éléments principaux à ne pas oublier.
+- Accès & Analyse des données
+- Préparation des données
+- Modélisation
+- Evaluation et scoring (Itération)
+- Déploiement (Ré-évaluation régulière/Itération)
 
 ## Etape N°1 : Définition des objectifs
 Si cette étape peut paraître évidente elle n’en n’est pas moins vitale pour la réussite du projet. Au delà de la problématique métier sous-jacente il s’agit ici de déterminer de quel typologie de problème nous devons résoudre.
