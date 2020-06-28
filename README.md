@@ -1,6 +1,7 @@
 # Datascience_toolkit
 Boite à outils pour les library de Data Science tel que Pandas, Numpy, etc...
 
+# Mise en Ouvre d'un Projet de Datascience
 
 Un projet de Data Science aura besoin d’une grande souplesse et de réajustements réguliers.
 
