@@ -26,29 +26,28 @@ Ensuite quelle est la typologie du problème à résoudre :
 Pour avoir plus de détails sur ces problèmes de Machine Learning. Si vous êtes perdu n’hésitez pas à vous référer au memento des algorithmes de Machine Learning de datacorner.fr
 
 ## Etape N°2 : Accès & Analyse des données
-Voici une étape cruciale dans laquelle vous devrez retravailler les données (features ou variables). C’est une opération indispensable car les algorithmes de Machine Learning n’acceptent pas tout type de données. 
+Étape cruciale dans laquelle il faut retravailler les données (features ou variables). C’est une opération indispensable car les algorithmes de Machine Learning n’acceptent pas tout type de données. 
 C’est une opération nécessaire afin d’affiner les variables pour qu’elles soient mieux gérées par ces mêmes algorithmes.
 
-Découpage du jeu de données
+### Découpage du jeu de données
 Tout d’abord vous travaillez avec un jeu de données. Vous allez devoir le découper en deux parties (minimum) :
 
-Données d’entraînement : sous-ensemble destiné à l’apprentissage d’un modèle.
-Données de test : sous-ensemble destiné à l’évaluation du modèle. Ce jeu de données ne doit en aucun cas être utilisé lors de la conception du modèle !
-Ce découpage vous allez le gérer à partir de fonctions prédéfinies (par exemple via sklearn.model_selection.train_test_split). Mais rien n’est jamais si simple car la manière dont vous allez découper votre jeu de données peut avoir une importance trop grande sur votre modèle.
-A ce niveau déjà il va falloir faire preuve de subtilité et tester plusieurs possibilités (ex. sklearn.model_selection.KFold).
+- Données d’entraînement : sous-ensemble destiné à l’apprentissage d’un modèle.
+- Données de test : sous-ensemble destiné à l’évaluation du modèle. Ce jeu de données ne doit en aucun cas être utilisé lors de la conception du modèle !
+Ce découpage vous allez le gérer à partir de fonctions prédéfinies (sklearn.model_selection.train_test_split). Mais rien n’est jamais si simple car la manière dont vous allez découper votre jeu de données peut avoir une importance trop grande sur votre modèle.
+Il faudra faire tester plusieurs possibilités (ex. sklearn.model_selection.KFold).
 
-Analyse des données
-C’est une étape toute aussi importante dans laquelle vous allez devoir :
+### Analyse des données
 
-Faire un inventaire de vos données (type de données) :
-Typologie : Numériques, temporelles, textes, binaires, etc.
-Variables catégorielles, discrètes ou continues ?
-Nombre d’observations (nombre de lignes) ?
-Nombre de features/variables (nombre de colonnes) ?
-Détecter si vous avez des outliers et surtout décider de ce que vous allez en faire (les supprimer ou simplement les altérer)
-Détecter les valeurs manquantes
-Détection de variables/features corrélées
-A ce niveau là il est indispensable à mon sens de disposer d’un bon outil de dataviz !
+- Faire un inventaire de vos données (type de données) :
+- Typologie : Numériques, temporelles, textes, binaires, etc.
+- Variables catégorielles, discrètes ou continues ?
+- Nombre d’observations (nombre de lignes) ?
+- Nombre de features/variables (nombre de colonnes) ?
+- Détecter si vous avez des outliers et surtout décider de ce que vous allez en faire (les supprimer ou simplement les altérer)
+- Détecter les valeurs manquantes
+- Détection de variables/features corrélées
+A ce niveau là il est indispensable de disposer d’un bon outil de dataviz !
 
 ## Etape N°3 : Préparation des données
 L’étape N°2 permettant de faire un état des lieux complet des données dont vous disposez, vous allez devoir maintenant préparer vos features/variables afin qu’elles soient utilisables par des algorithmes de Machine Learning.
