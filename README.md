@@ -69,46 +69,51 @@ On appelle aussi cette étape le feature engineering !
 
 Un autre aspect important est la gestion de ses jeux de données : la création des jeux de données de travail. Si vous avez un jeu de données unique vous allez devoir constituer un jeu de données d’entraînement et un jeu de test !
 
-## Etape N°4 : La modélisation
-Lors de cette étape vous allez choisir le ou plutôt les algorithmes de Machine Learning qui vous semblent les mieux adaptés.
+## 4. La modélisation
+Choix du ou plutôt des algorithmes de Machine Learning qui vous semblent les mieux adaptés.
 
-Selon le problème que vous allez traiter, vous avez le choix des algorithmes, piochez et testez donc ! Cette phase peut être longue (temps) car l’entraînement est une tâche très lourde surtout dés lors que l’on a beaucoup de données (ce qui est par ailleurs conseillé).
+Selon le problème que vous allez traiter, vous avez le choix des algorithmes, piochez et testez donc ! Cette phase peut être longue (temps) car l’entraînement est une tâche très lourde surtout dés lors que l’on a beaucoup de données.
 
 La difficulté n’est pas dans ce choix mais plutôt dans l’ajustement des hyperparamètres que vous allez devoir faire afin d’obtenir un modèle performant.
 
-## Etape N°5 : Evaluation & scoring
-Votre algorithme choisit ainsir que les hyper-paramètres ajustés, vous allez devoir valider votre modèle. Impossible de ne pas entrer dans un mode itératif dans lequel vous allez tatoner avec ces hyper-parametres.
-N’hésitez pas ici à faire appel à des outils tiers ou des approches comme la recherche par gille (grid-search).
+## 5. Evaluation & scoring
+### Scoring
+Durant l'entrainement du modèle, l'algorithme va ajuster les hyper-paramètres, mais il va falloir valider un modèle. Impossible de ne pas entrer dans un mode itératif dans lequel il va falloir essayer ,tester ces hyper-parametres et avancer de manière empirique.
+On peut ici à faire appel à des outils tiers ou des approches comme la recherche par gille (grid-search).
 
-Attention surtout à l’over-fitting (ou sur-entraînement) qui vous donnera l’illusion d’un bon modèle !
+Attention surtout à *l’over-fitting* (ou sur-entraînement) qui vous donnera l’illusion d’un bon modèle !
 
-En effet si vous dépasser un certain score (au alentours de 95%) il est probable que votre modèle soit ultra-performant … mais que pour vos données d’entraînement. Essayez le donc avec les données de test … vous serez certainement surpris !
+En effet si un certain score est depassé (au alentours de 95%) il est probable que le modèle soit ultra-performant … mais uniquement pour les données d’entraînement.
 
-En ce qui concerne la manière de mesurer les performances elle diffère selon le type de problème mais aussi selon ce que vous voulez vraiment mesurer. Plusieurs mesures sont disponibles (liste non exhaustive):
+### Évaluer le modèle
+Pour mesurer les performances les *métriques* diffère selon le type de problème mais aussi selon ce que l'on veut mesurer. 
+***Métriques d'évaluation:***
 
-Classification
-Matrice de confusion
-Courbe ROC
-Précision / Rappel
-Régression
-Erreur de prédiction
-Graphe XY valeur à prédire / valeur prédite
-Clustering
-Variance intra classe, inter classe
-Nombre d’arc coupés
-Vous entrez donc dans une phase d’optimisation basée sur une approche forcément itérative. Voici quelques pistes d’amélioration et/ou d’optimisation :
+- *Classification*
+    - Matrice de confusion
+    - Courbe ROC
+    - Précision / Rappel
+- *Régression*
+    - Erreur de prédiction
+    - Graphe XY valeur à prédire / valeur prédite
+- *Clustering*
+    - Variance intra classe, inter classe
+    - Nombre d’arc coupés
+    
+Maintenant il y a une phase d’optimisation basée sur une approche forcément itérative. 
+Voici quelques pistes d’amélioration et/ou d’optimisation :
 
-Changement d’algorithme
-La distribution des jeux de tests/entraintement est-elle cohérente, homogène ?
-Ajout/suppression de variables
-Groupement de valeurs : ajouter des moyennes, somme, nombre par groupes.
-Ajout/suppression de lignes (avec de nouvelles sources de données)
-Ajustement des hyper-paramètres
-Ajouter des combinaisons de variables difficiles à apprendre pour un modèle comme un ratio
-Aggréger sur des périodes supérieure (par exemple 1 mois pour une granularité journalière) peut être une bonne piste
-Utiliser la sortie d’autre modèle de machine learning.
-Chercher l’information qui pourrait aider un modèle à corriger des erreurs
-Etape N°6 : Déploiement
-Votre modèle est prêt. il est performant et peut se plier à tous les cas de figure. Vous pouvez maintenant le déployer au travers d’une API ou l’intégrer directement dans un programme. Attention cependant, car par nature un modèle ne peu vivre eternellement (il est en effet basé sur un apprentissage sur des données … et les données évoluent sans cesse). Il faut donc prévoir de vérifier régulièrement.
+- Changement d’algorithme
+- La distribution des jeux de tests/entraintement est-elle cohérente, homogène ?
+- Ajout/suppression de variables
+- Groupement de valeurs : ajouter des moyennes, somme, nombre par groupes.
+- Ajout/suppression de lignes (avec de nouvelles sources de données)
+- Ajustement des hyper-paramètres
+- Ajouter des combinaisons de variables difficiles à apprendre pour un modèle comme un ratio
+- aggréger sur des périodes supérieure (par exemple 1 mois pour une granularité journalière) peut être une bonne piste
+- Utiliser la sortie d’autre modèle de machine learning.
+- Chercher l’information qui pourrait aider un modèle à corriger des erreurs
 
-Voilà pour cet article qui avait pour vocation de parcourir un projet de Machine Learning type. Si vous avez besoin d’aller plus loin dans la méthodologie je vous invite à aller voir du coté de la méthode CRISP.
+## 6. Déploiement
+Le modèle est prêt. il est performant et peut se plier à tous les cas de figure. Vous pouvez maintenant le déployer au travers d’une API ou l’intégrer directement dans un programme. Attention cependant, car par nature un modèle ne peu vivre eternellement (il est en effet basé sur un apprentissage sur des données … et les données évoluent sans cesse). Il faut donc prévoir de vérifier régulièrement.
+
