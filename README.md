@@ -1,14 +1,7 @@
 # Datascience_toolkit
 boite à outils pour les library tel que Pandas, Numpy, etc...
 
-Un projet de Machine Learning ne s’aborde pas comme un projet logiciel classique. En effet la modélisation par apprentissage diffère totalement de la programmation stricte basée sur des règles et exceptions.
-Il en va donc naturellement de même sur la façon d’aborder ce type de projet. Terminé donc le développement en V. Pour autant une méthode 100% agile ne conviendra pas nécessairement, du moins pas à toutes les étapes.
-
-Bref, un projet de Machine Learning n’est pas un projet informatique comme les autres !
-
 Ce n’est pas un projet de développement classique et il a donc ses propres contraintes mais surtout il aura besoin d’une grande souplesse et de réajustements réguliers.
-
-Réussir son projet de Machine Learning revient à donc respecter les étapes ci-dessous:
 
 ## Définition des objectifs
 - Accès & Analyse des données
