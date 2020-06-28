@@ -1,7 +1,8 @@
 # Datascience_toolkit
-boite à outils pour les library tel que Pandas, Numpy, etc...
+Boite à outils pour les library de Data Science tel que Pandas, Numpy, etc...
 
-Ce n’est pas un projet de développement classique et il a donc ses propres contraintes mais surtout il aura besoin d’une grande souplesse et de réajustements réguliers.
+
+Un projet de Data Science aura besoin d’une grande souplesse et de réajustements réguliers.
 
 ## Définition des objectifs
 - Accès & Analyse des données
@@ -10,7 +11,7 @@ Ce n’est pas un projet de développement classique et il a donc ses propres co
 - Evaluation et scoring (Itération)
 - Déploiement (Ré-évaluation régulière/Itération)
 
-## Etape N°1 : Définition des objectifs
+## 1. Définition des objectifs
 Si cette étape peut paraître évidente elle n’en n’est pas moins vitale pour la réussite du projet. Au delà de la problématique métier sous-jacente il s’agit ici de déterminer de quel typologie de problème nous devons résoudre.
 
 Pour cela nous devons savoir si nous avons des données d’expérimentation avec résultat ou non (voire partiels) afin de déterminer si nous abordons un problème de type supervisé ou non-supervisé.
@@ -25,7 +26,7 @@ Ensuite quelle est la typologie du problème à résoudre :
 - Réduction du nombre de dimension
 Pour avoir plus de détails sur ces problèmes de Machine Learning. Si vous êtes perdu n’hésitez pas à vous référer au memento des algorithmes de Machine Learning de datacorner.fr
 
-## Etape N°2 : Accès & Analyse des données
+## 2. Accès & Analyse des données
 Étape cruciale dans laquelle il faut retravailler les données (features ou variables). C’est une opération indispensable car les algorithmes de Machine Learning n’acceptent pas tout type de données. 
 C’est une opération nécessaire afin d’affiner les variables pour qu’elles soient mieux gérées par ces mêmes algorithmes.
 
@@ -49,20 +50,21 @@ Il faudra faire tester plusieurs possibilités (ex. sklearn.model_selection.KFol
 - Détection de variables/features corrélées
 A ce niveau là il est indispensable de disposer d’un bon outil de dataviz !
 
-## Etape N°3 : Préparation des données
-L’étape N°2 permettant de faire un état des lieux complet des données dont vous disposez, vous allez devoir maintenant préparer vos features/variables afin qu’elles soient utilisables par des algorithmes de Machine Learning.
+## 3. Préparation des données
+L’étape N°2 permettant de faire un état des lieux complet des données dont vous disposez, il va falloir maintenant préparer vos features/variables afin qu’elles soient utilisables par des algorithmes de Machine Learning.
 
 Pour reprendre les points précédent :
 
-Vous ne devez avoir des données (variables) qu’au format numériques. si vous avez des données de type :
-Date : Appliquez des formules pour les transformer en période, etc. Pourquoi ne pas ajouter des agrégations sur des fenêtres glissantes (sur la semaine, le mois, l’année qui a précédé) ?
-Catégorielles: utilisez l’encodage One-Hot dans la mesure du possible. Si vous avez trop de variables, réduisez le scope en faisant des regroupement.
-Texte: il vous faudra certainement découper, reformater vos données pour avoir des données catégorielles
-Si vous avez des informations manquantes (Null)
-Supprimez la ligne entière si vous avez vraiment beaucoup de données (déconseillé mais parfois vous n’aurez pas le choix)
-Remplacez les par une valeurs, la valeur médiane, la moyenne, etc.
-Mettez à l’echelle les valeurs numériques (feature scaling)
-Passer au logarithme lorsque les variables ont des valeurs extrêmes, cela réduit leur importance.
+- Vous devez avoir des données au format numériques. si vous avez des données de type :
+    - **Date** : Appliquez des formules pour les transformer en période, etc. Pourquoi ne pas ajouter des agrégations sur des fenêtres glissantes (sur la semaine, le mois, l’année qui a précédé) ?
+    - **Catégorielles**: utilisez l’encodage One-Hot dans la mesure du possible. Si vous avez trop de variables, réduisez le scope en faisant des regroupement.
+    - **Texte**: il vous faudra certainement découper, reformater vos données pour avoir des données catégorielles
+
+- Si vous avez des **informations manquantes** (Null):
+  - Supprimez la ligne entière si vous avez vraiment beaucoup de données (déconseillé mais parfois vous n’aurez pas le choix)
+  - Remplacez les par une valeurs, la valeur médiane, la moyenne, etc.
+  - Mettez à l’echelle les valeurs numériques (feature scaling)
+  - Passer au logarithme lorsque les variables ont des valeurs extrêmes, cela réduit leur importance.
 On appelle aussi cette étape le feature engineering !
 
 Un autre aspect important est la gestion de ses jeux de données : la création des jeux de données de travail. Si vous avez un jeu de données unique vous allez devoir constituer un jeu de données d’entraînement et un jeu de test !
